@@ -5,7 +5,7 @@ RAG chain: retrieves relevant products from ChromaDB, then answers via Groq LLM.
 import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
