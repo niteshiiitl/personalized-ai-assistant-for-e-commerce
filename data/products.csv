@@ -1,0 +1,16 @@
+id,name,category,price,description,stock,rating
+1,Nike Air Max 270,Shoes,129.99,"Lightweight running shoe with Air Max cushioning, great for daily use",50,4.5
+2,Levi's 501 Jeans,Clothing,59.99,"Classic straight fit jeans, durable denim, available in multiple washes",120,4.3
+3,Apple AirPods Pro,Electronics,249.99,"Active noise cancellation, transparency mode, spatial audio, wireless charging",30,4.8
+4,Samsung 4K Smart TV 55inch,Electronics,699.99,"Crystal UHD display, built-in Alexa, HDR10+, 3 HDMI ports",15,4.6
+5,Instant Pot Duo 7-in-1,Kitchen,89.99,"Pressure cooker, slow cooker, rice cooker, steamer, saute, yogurt maker",80,4.7
+6,The Alchemist Book,Books,14.99,"Paulo Coelho's masterpiece about following your dreams and personal legend",200,4.9
+7,Yoga Mat Premium,Sports,35.99,"Non-slip 6mm thick mat, eco-friendly TPE material, includes carry strap",90,4.4
+8,Vitamin C Serum,Beauty,24.99,"20% Vitamin C with hyaluronic acid, brightens skin, reduces dark spots",150,4.2
+9,Mechanical Keyboard RGB,Electronics,79.99,"TKL layout, Cherry MX switches, per-key RGB lighting, USB-C",40,4.5
+10,Coffee Maker Drip,Kitchen,49.99,"12-cup programmable coffee maker, built-in grinder, thermal carafe",60,4.3
+11,Running Shorts Nike,Clothing,34.99,"Dri-FIT fabric, 7-inch inseam, built-in brief, reflective details",100,4.4
+12,Wireless Mouse Logitech,Electronics,39.99,"MX Master 3, ergonomic design, 4000 DPI, multi-device support",70,4.7
+13,Protein Powder Whey,Health,54.99,"25g protein per serving, chocolate flavor, 5lb bag, no artificial colors",45,4.5
+14,Sunglasses Polarized,Accessories,29.99,"UV400 protection, polarized lenses, lightweight frame, unisex design",110,4.1
+15,Harry Potter Box Set,Books,79.99,"Complete 7-book hardcover collection, illustrated edition",35,4.9

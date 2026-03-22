@@ -1,0 +1,7 @@
+.env
+vectorstore/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+data/finetune_dataset.jsonl
