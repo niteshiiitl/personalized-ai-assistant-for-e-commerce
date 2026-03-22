@@ -7,7 +7,7 @@ import os
 import pandas as pd
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 # Paths relative to project root (works locally and on Streamlit Cloud)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
