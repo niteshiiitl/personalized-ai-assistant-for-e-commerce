@@ -61,7 +61,6 @@ def build_vectorstore():
         persist_directory=CHROMA_DIR,
         collection_name=COLLECTION_NAME,
     )
-    vectorstore.persist()
     print(f"Done. {len(docs)} products indexed into ChromaDB at '{CHROMA_DIR}'")
     return vectorstore
 

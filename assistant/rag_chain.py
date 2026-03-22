@@ -5,20 +5,22 @@ RAG chain: retrieves relevant products from ChromaDB, then answers via Groq LLM.
 import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain.chains import ConversationalRetrievalChain
-from langchain.memory import ConversationBufferWindowMemory
-from langchain.prompts import PromptTemplate
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
 from assistant.ingest import get_vectorstore_auto
 
 load_dotenv()
 
+
 def get_groq_api_key():
-    # Try Streamlit secrets first (Streamlit Cloud), fall back to .env
     try:
         import streamlit as st
         return st.secrets["GROQ_API_KEY"]
     except Exception:
         return os.getenv("GROQ_API_KEY")
+
 
 SYSTEM_PROMPT = """You are ShopBot, a friendly and knowledgeable AI shopping assistant for an e-commerce store.
 Use the retrieved product information below to help the customer.
@@ -32,55 +34,50 @@ Guidelines:
 - Never make up products that aren't in the context
 
 Context from product catalog:
-{context}
+{context}"""
 
-Chat History:
-{chat_history}
+prompt = ChatPromptTemplate.from_messages([
+    ("system", SYSTEM_PROMPT),
+    MessagesPlaceholder(variable_name="chat_history"),
+    ("human", "{question}"),
+])
 
-Customer Question: {question}
 
-ShopBot Answer:"""
-
-PROMPT = PromptTemplate(
-    input_variables=["context", "chat_history", "question"],
-    template=SYSTEM_PROMPT,
-)
+def format_docs(docs):
+    return "\n\n".join(doc.page_content for doc in docs)
 
 
 def build_chain():
     llm = ChatGroq(
-        model_name="llama3-8b-8192",
+        model="llama3-8b-8192",
         temperature=0.3,
-        groq_api_key=get_groq_api_key(),
+        api_key=get_groq_api_key(),
     )
-
     vectorstore = get_vectorstore_auto()
-    retriever = vectorstore.as_retriever(
-        search_type="similarity",
-        search_kwargs={"k": 4},  # top 4 relevant products
+    retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 4})
+
+    chain = (
+        {
+            "context": lambda x: format_docs(retriever.invoke(x["question"])),
+            "question": lambda x: x["question"],
+            "chat_history": lambda x: x.get("chat_history", []),
+        }
+        | prompt
+        | llm
+        | StrOutputParser()
     )
-
-    memory = ConversationBufferWindowMemory(
-        memory_key="chat_history",
-        return_messages=True,
-        output_key="answer",
-        k=5,  # remember last 5 exchanges
-    )
-
-    chain = ConversationalRetrievalChain.from_llm(
-        llm=llm,
-        retriever=retriever,
-        memory=memory,
-        combine_docs_chain_kwargs={"prompt": PROMPT},
-        return_source_documents=True,
-        verbose=False,
-    )
-    return chain
+    return {"chain": chain, "retriever": retriever}
 
 
-def ask(chain, question: str) -> dict:
-    result = chain({"question": question})
+def ask(chain_dict, question: str, chat_history: list = None) -> dict:
+    chat_history = chat_history or []
+    answer = chain_dict["chain"].invoke({
+        "question": question,
+        "chat_history": chat_history,
+    })
+    # get source docs for citations
+    docs = chain_dict["retriever"].invoke(question)
     return {
-        "answer": result["answer"],
-        "sources": [doc.metadata["name"] for doc in result.get("source_documents", [])],
+        "answer": answer,
+        "sources": [doc.metadata.get("name", "") for doc in docs],
     }
