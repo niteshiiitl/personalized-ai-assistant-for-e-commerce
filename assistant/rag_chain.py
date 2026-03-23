@@ -82,5 +82,8 @@ def ask(chain_dict, question: str, chat_history: list = None, filtered_context: 
     docs = chain_dict["retriever"].invoke(question)
     return {
         "answer": answer,
-        "sources": [doc.metadata.get("name", "") for doc in docs],
+        "sources": [
+            {"name": doc.metadata.get("name", ""), "url": doc.metadata.get("url", "")}
+            for doc in docs
+        ],
     }

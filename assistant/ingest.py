@@ -44,6 +44,7 @@ def load_products(csv_path: str) -> list[Document]:
                 "price": float(row["price"]),
                 "rating": float(row["rating"]),
                 "stock": int(row["stock"]),
+                "url": str(row.get("url", "")),
             }
         ))
     return docs

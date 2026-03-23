@@ -1,46 +1,46 @@
-id,name,category,price,description,stock,rating
-1,Nike Air Max 270,Shoes,10799,"Lightweight running shoe with Air Max cushioning, great for daily use",50,4.5
-2,Levi's 501 Jeans,Clothing,4999,"Classic straight fit jeans, durable denim, available in multiple washes",120,4.3
-3,Apple AirPods Pro,Electronics,20799,"Active noise cancellation, transparency mode, spatial audio, wireless charging",30,4.8
-4,Samsung 4K Smart TV 55inch,Electronics,57999,"Crystal UHD display, built-in Alexa, HDR10+, 3 HDMI ports",15,4.6
-5,Instant Pot Duo 7-in-1,Kitchen,7499,"Pressure cooker, slow cooker, rice cooker, steamer, saute, yogurt maker",80,4.7
-6,The Alchemist Book,Books,1249,"Paulo Coelho's masterpiece about following your dreams and personal legend",200,4.9
-7,Yoga Mat Premium,Sports,2999,"Non-slip 6mm thick mat, eco-friendly TPE material, includes carry strap",90,4.4
-8,Vitamin C Serum,Beauty,2099,"20% Vitamin C with hyaluronic acid, brightens skin, reduces dark spots",150,4.2
-9,Mechanical Keyboard RGB,Electronics,6649,"TKL layout, Cherry MX switches, per-key RGB lighting, USB-C",40,4.5
-10,Coffee Maker Drip,Kitchen,4149,"12-cup programmable coffee maker, built-in grinder, thermal carafe",60,4.3
-11,Running Shorts Nike,Clothing,2899,"Dri-FIT fabric, 7-inch inseam, built-in brief, reflective details",100,4.4
-12,Wireless Mouse Logitech,Electronics,3299,"MX Master 3, ergonomic design, 4000 DPI, multi-device support",70,4.7
-13,Protein Powder Whey,Health,4549,"25g protein per serving, chocolate flavor, 5lb bag, no artificial colors",45,4.5
-14,Sunglasses Polarized,Accessories,2499,"UV400 protection, polarized lenses, lightweight frame, unisex design",110,4.1
-15,Harry Potter Box Set,Books,6649,"Complete 7-book hardcover collection, illustrated edition",35,4.9
-16,Sony WH-1000XM5,Electronics,28999,"Industry-leading noise cancellation, 30hr battery, multipoint connection",25,4.9
-17,iPad Air 11inch,Electronics,49799,"M2 chip, 11-inch Liquid Retina display, Apple Pencil Pro support, 256GB",20,4.8
-18,Adidas Ultraboost 22,Shoes,15799,"Responsive Boost midsole, Primeknit upper, Continental rubber outsole",60,4.6
-19,Levi's Denim Jacket,Clothing,7449,"Classic trucker jacket, 100% cotton denim, multiple color options",75,4.4
-20,Air Fryer Ninja 6qt,Kitchen,9949,"6-quart capacity, 4-in-1 functionality, up to 75% less fat, dishwasher safe",55,4.7
-21,Atomic Habits Book,Books,1579,"James Clear's guide to building good habits and breaking bad ones",300,4.9
-22,Resistance Bands Set,Sports,1899,"5 resistance levels, latex-free, includes door anchor and carry bag",130,4.5
-23,Retinol Night Cream,Beauty,2749,"0.5% retinol with peptides, reduces fine lines, fragrance-free, 50ml",95,4.3
-24,Omega-3 Fish Oil,Health,1649,"1200mg EPA+DHA per serving, enteric coated, 90 softgels, no fishy aftertaste",180,4.6
-25,Leather Wallet Slim,Accessories,2099,"Genuine leather, RFID blocking, 8 card slots, minimalist design",140,4.4
-26,Dell 27inch Monitor,Electronics,27399,"IPS panel, 165Hz refresh rate, 1ms response time, USB-C, FreeSync",18,4.7
-27,Converse Chuck Taylor,Shoes,5499,"Classic canvas high-top, rubber sole, available in 20+ colors",200,4.5
-28,Hoodie Champion Reverse Weave,Clothing,5499,"Heavyweight fleece, reverse weave construction, kangaroo pocket",85,4.6
-29,Blender Vitamix A2500,Kitchen,37349,"Variable speed control, 3 program settings, self-cleaning, 64oz container",22,4.8
-30,Rich Dad Poor Dad,Books,1079,"Robert Kiyosaki's personal finance classic, updated 25th anniversary edition",250,4.7
-31,Dumbbell Set Adjustable,Sports,12449,"5-52.5 lbs per dumbbell, replaces 15 sets, fast adjust dial system",30,4.8
-32,Face Wash CeraVe,Beauty,1249,"Hydrating cleanser with ceramides and hyaluronic acid, 16oz, all skin types",220,4.7
-33,Creatine Monohydrate,Health,2499,"Micronized creatine, 5g per serving, unflavored, 60 servings, lab tested",100,4.6
-34,Backpack Osprey 40L,Accessories,13249,"40L travel pack, TSA-friendly, laptop sleeve, rain cover included",40,4.8
-35,Kindle Paperwhite,Electronics,11649,"6.8-inch display, adjustable warm light, waterproof, 3 months free Kindle Unlimited",65,4.7
-36,New Balance 990v6,Shoes,15349,"Made in USA, premium suede and mesh upper, ENCAP midsole technology",35,4.6
-37,Linen Shirt Uniqlo,Clothing,3299,"100% linen, breathable summer fabric, relaxed fit, 8 color options",160,4.3
-38,Stand Mixer KitchenAid,Kitchen,31499,"5-quart bowl, 10 speeds, 59 attachments compatible, tilt-head design",12,4.9
-39,Atomic Habits Workbook,Books,1399,"Companion workbook to Atomic Habits with exercises and habit trackers",120,4.5
-40,Jump Rope Speed,Sports,1579,"Adjustable steel cable, ball bearing handles, suitable for all fitness levels",175,4.4
-41,Sunscreen SPF 50 EltaMD,Beauty,3299,"Broad spectrum UV protection, oil-free, dermatologist recommended, 3oz",85,4.8
-42,Multivitamin Men's,Health,2099,"23 essential vitamins and minerals, once daily, 90 tablets, no artificial colors",130,4.5
-43,Luggage Samsonite 28inch,Accessories,16599,"Hardside spinner, TSA lock, expandable, lightweight polycarbonate shell",28,4.6
-44,Webcam Logitech 4K,Electronics,12449,"4K Ultra HD, auto-focus, built-in mic, works with Zoom and Teams",50,4.5
-45,Hiking Boots Merrell,Shoes,11649,"Waterproof leather, Vibram outsole, air cushion heel, ankle support",45,4.7
+id,name,category,price,description,stock,rating,url
+1,Nike Air Max 270,Shoes,10799,"Lightweight running shoe with Air Max cushioning, great for daily use",50,4.5,https://www.amazon.in/s?k=Nike+Air+Max+270
+2,Levi's 501 Jeans,Clothing,4999,"Classic straight fit jeans, durable denim, available in multiple washes",120,4.3,https://www.amazon.in/s?k=Levis+501+Jeans
+3,Apple AirPods Pro,Electronics,20799,"Active noise cancellation, transparency mode, spatial audio, wireless charging",30,4.8,https://www.amazon.in/s?k=Apple+AirPods+Pro
+4,Samsung 4K Smart TV 55inch,Electronics,57999,"Crystal UHD display, built-in Alexa, HDR10+, 3 HDMI ports",15,4.6,https://www.amazon.in/s?k=Samsung+4K+Smart+TV+55inch
+5,Instant Pot Duo 7-in-1,Kitchen,7499,"Pressure cooker, slow cooker, rice cooker, steamer, saute, yogurt maker",80,4.7,https://www.amazon.in/s?k=Instant+Pot+Duo
+6,The Alchemist Book,Books,1249,"Paulo Coelho's masterpiece about following your dreams and personal legend",200,4.9,https://www.amazon.in/s?k=The+Alchemist+Paulo+Coelho
+7,Yoga Mat Premium,Sports,2999,"Non-slip 6mm thick mat, eco-friendly TPE material, includes carry strap",90,4.4,https://www.amazon.in/s?k=Premium+Yoga+Mat
+8,Vitamin C Serum,Beauty,2099,"20% Vitamin C with hyaluronic acid, brightens skin, reduces dark spots",150,4.2,https://www.amazon.in/s?k=Vitamin+C+Serum+20+percent
+9,Mechanical Keyboard RGB,Electronics,6649,"TKL layout, Cherry MX switches, per-key RGB lighting, USB-C",40,4.5,https://www.amazon.in/s?k=Mechanical+Keyboard+RGB
+10,Coffee Maker Drip,Kitchen,4149,"12-cup programmable coffee maker, built-in grinder, thermal carafe",60,4.3,https://www.amazon.in/s?k=Drip+Coffee+Maker
+11,Running Shorts Nike,Clothing,2899,"Dri-FIT fabric, 7-inch inseam, built-in brief, reflective details",100,4.4,https://www.amazon.in/s?k=Nike+Running+Shorts+DriFIT
+12,Wireless Mouse Logitech,Electronics,3299,"MX Master 3, ergonomic design, 4000 DPI, multi-device support",70,4.7,https://www.amazon.in/s?k=Logitech+MX+Master+3
+13,Protein Powder Whey,Health,4549,"25g protein per serving, chocolate flavor, 5lb bag, no artificial colors",45,4.5,https://www.amazon.in/s?k=Whey+Protein+Powder+Chocolate
+14,Sunglasses Polarized,Accessories,2499,"UV400 protection, polarized lenses, lightweight frame, unisex design",110,4.1,https://www.amazon.in/s?k=Polarized+Sunglasses+UV400
+15,Harry Potter Box Set,Books,6649,"Complete 7-book hardcover collection, illustrated edition",35,4.9,https://www.amazon.in/s?k=Harry+Potter+Box+Set+Hardcover
+16,Sony WH-1000XM5,Electronics,28999,"Industry-leading noise cancellation, 30hr battery, multipoint connection",25,4.9,https://www.amazon.in/s?k=Sony+WH-1000XM5
+17,iPad Air 11inch,Electronics,49799,"M2 chip, 11-inch Liquid Retina display, Apple Pencil Pro support, 256GB",20,4.8,https://www.amazon.in/s?k=iPad+Air+M2+11inch
+18,Adidas Ultraboost 22,Shoes,15799,"Responsive Boost midsole, Primeknit upper, Continental rubber outsole",60,4.6,https://www.amazon.in/s?k=Adidas+Ultraboost+22
+19,Levi's Denim Jacket,Clothing,7449,"Classic trucker jacket, 100% cotton denim, multiple color options",75,4.4,https://www.amazon.in/s?k=Levis+Denim+Jacket+Trucker
+20,Air Fryer Ninja 6qt,Kitchen,9949,"6-quart capacity, 4-in-1 functionality, up to 75% less fat, dishwasher safe",55,4.7,https://www.amazon.in/s?k=Ninja+Air+Fryer+6qt
+21,Atomic Habits Book,Books,1579,"James Clear's guide to building good habits and breaking bad ones",300,4.9,https://www.amazon.in/s?k=Atomic+Habits+James+Clear
+22,Resistance Bands Set,Sports,1899,"5 resistance levels, latex-free, includes door anchor and carry bag",130,4.5,https://www.amazon.in/s?k=Resistance+Bands+Set+5+levels
+23,Retinol Night Cream,Beauty,2749,"0.5% retinol with peptides, reduces fine lines, fragrance-free, 50ml",95,4.3,https://www.amazon.in/s?k=Retinol+Night+Cream+0.5+percent
+24,Omega-3 Fish Oil,Health,1649,"1200mg EPA+DHA per serving, enteric coated, 90 softgels, no fishy aftertaste",180,4.6,https://www.amazon.in/s?k=Omega+3+Fish+Oil+1200mg
+25,Leather Wallet Slim,Accessories,2099,"Genuine leather, RFID blocking, 8 card slots, minimalist design",140,4.4,https://www.amazon.in/s?k=Slim+Leather+Wallet+RFID
+26,Dell 27inch Monitor,Electronics,27399,"IPS panel, 165Hz refresh rate, 1ms response time, USB-C, FreeSync",18,4.7,https://www.amazon.in/s?k=Dell+27+inch+165Hz+Monitor
+27,Converse Chuck Taylor,Shoes,5499,"Classic canvas high-top, rubber sole, available in 20+ colors",200,4.5,https://www.amazon.in/s?k=Converse+Chuck+Taylor+High+Top
+28,Hoodie Champion Reverse Weave,Clothing,5499,"Heavyweight fleece, reverse weave construction, kangaroo pocket",85,4.6,https://www.amazon.in/s?k=Champion+Reverse+Weave+Hoodie
+29,Blender Vitamix A2500,Kitchen,37349,"Variable speed control, 3 program settings, self-cleaning, 64oz container",22,4.8,https://www.amazon.in/s?k=Vitamix+A2500+Blender
+30,Rich Dad Poor Dad,Books,1079,"Robert Kiyosaki's personal finance classic, updated 25th anniversary edition",250,4.7,https://www.amazon.in/s?k=Rich+Dad+Poor+Dad+Kiyosaki
+31,Dumbbell Set Adjustable,Sports,12449,"5-52.5 lbs per dumbbell, replaces 15 sets, fast adjust dial system",30,4.8,https://www.amazon.in/s?k=Adjustable+Dumbbell+Set
+32,Face Wash CeraVe,Beauty,1249,"Hydrating cleanser with ceramides and hyaluronic acid, 16oz, all skin types",220,4.7,https://www.amazon.in/s?k=CeraVe+Hydrating+Face+Wash
+33,Creatine Monohydrate,Health,2499,"Micronized creatine, 5g per serving, unflavored, 60 servings, lab tested",100,4.6,https://www.amazon.in/s?k=Creatine+Monohydrate+Micronized
+34,Backpack Osprey 40L,Accessories,13249,"40L travel pack, TSA-friendly, laptop sleeve, rain cover included",40,4.8,https://www.amazon.in/s?k=Osprey+40L+Backpack
+35,Kindle Paperwhite,Electronics,11649,"6.8-inch display, adjustable warm light, waterproof, 3 months free Kindle Unlimited",65,4.7,https://www.amazon.in/s?k=Kindle+Paperwhite+2024
+36,New Balance 990v6,Shoes,15349,"Made in USA, premium suede and mesh upper, ENCAP midsole technology",35,4.6,https://www.amazon.in/s?k=New+Balance+990v6
+37,Linen Shirt Uniqlo,Clothing,3299,"100% linen, breathable summer fabric, relaxed fit, 8 color options",160,4.3,https://www.amazon.in/s?k=Linen+Shirt+Men+Uniqlo
+38,Stand Mixer KitchenAid,Kitchen,31499,"5-quart bowl, 10 speeds, 59 attachments compatible, tilt-head design",12,4.9,https://www.amazon.in/s?k=KitchenAid+Stand+Mixer+5qt
+39,Atomic Habits Workbook,Books,1399,"Companion workbook to Atomic Habits with exercises and habit trackers",120,4.5,https://www.amazon.in/s?k=Atomic+Habits+Workbook
+40,Jump Rope Speed,Sports,1579,"Adjustable steel cable, ball bearing handles, suitable for all fitness levels",175,4.4,https://www.amazon.in/s?k=Speed+Jump+Rope+Adjustable
+41,Sunscreen SPF 50 EltaMD,Beauty,3299,"Broad spectrum UV protection, oil-free, dermatologist recommended, 3oz",85,4.8,https://www.amazon.in/s?k=EltaMD+Sunscreen+SPF+50
+42,Multivitamin Men's,Health,2099,"23 essential vitamins and minerals, once daily, 90 tablets, no artificial colors",130,4.5,https://www.amazon.in/s?k=Mens+Multivitamin+Daily
+43,Luggage Samsonite 28inch,Accessories,16599,"Hardside spinner, TSA lock, expandable, lightweight polycarbonate shell",28,4.6,https://www.amazon.in/s?k=Samsonite+28+inch+Hardside+Luggage
+44,Webcam Logitech 4K,Electronics,12449,"4K Ultra HD, auto-focus, built-in mic, works with Zoom and Teams",50,4.5,https://www.amazon.in/s?k=Logitech+4K+Webcam
+45,Hiking Boots Merrell,Shoes,11649,"Waterproof leather, Vibram outsole, air cushion heel, ankle support",45,4.7,https://www.amazon.in/s?k=Merrell+Hiking+Boots+Waterproof
