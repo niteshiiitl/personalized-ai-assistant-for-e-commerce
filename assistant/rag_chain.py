@@ -49,7 +49,7 @@ def format_docs(docs):
 
 def build_chain():
     llm = ChatGroq(
-        model="llama3-8b-8192",
+        model="llama-3.3-70b-versatile",
         temperature=0.3,
         api_key=get_groq_api_key(),
     )
