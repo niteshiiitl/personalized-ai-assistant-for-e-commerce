@@ -30,7 +30,7 @@ def load_products(csv_path: str) -> list[Document]:
         content = (
             f"Product: {row['name']}\n"
             f"Category: {row['category']}\n"
-            f"Price: ${row['price']}\n"
+            f"Price: ₹{row['price']}\n"
             f"Description: {row['description']}\n"
             f"Stock: {row['stock']} units\n"
             f"Rating: {row['rating']}/5"

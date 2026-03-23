@@ -84,8 +84,8 @@ with st.sidebar:
     st.divider()
     st.markdown("**Quick Prompts**")
     quick_prompts = [
-        "What electronics do you have under $100?",
-        "Recommend a gift under $50",
+        "What electronics do you have under ₹10,000?",
+        "Recommend a gift under ₹5,000",
         "What's your highest rated product?",
         "Show me sports & fitness items",
     ]
@@ -165,7 +165,7 @@ with col2:
             <strong>{row['name']}</strong><br>
             <small>{row['category']}</small><br>
             <span class="rating-stars">{stars}</span> {row['rating']}/5<br>
-            💲<strong>{row['price']}</strong><br>
+            ₹<strong>{row['price']:,}</strong><br>
             {stock_label}<br>
             <small>{row['description']}</small>
         </div>
