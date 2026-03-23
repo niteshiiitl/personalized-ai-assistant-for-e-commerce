@@ -69,13 +69,16 @@ def build_chain():
     return {"chain": chain, "retriever": retriever}
 
 
-def ask(chain_dict, question: str, chat_history: list = None) -> dict:
+def ask(chain_dict, question: str, chat_history: list = None, filtered_context: str = None) -> dict:
     chat_history = chat_history or []
+    # If sidebar filters are active, prepend filtered context to the question
+    augmented_question = question
+    if filtered_context:
+        augmented_question = f"[Active filters context - only consider these products]\n{filtered_context}\n\nUser question: {question}"
     answer = chain_dict["chain"].invoke({
-        "question": question,
+        "question": augmented_question,
         "chat_history": chat_history,
     })
-    # get source docs for citations
     docs = chain_dict["retriever"].invoke(question)
     return {
         "answer": answer,
