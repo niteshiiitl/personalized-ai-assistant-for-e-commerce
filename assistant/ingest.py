@@ -1,6 +1,6 @@
 """
 Ingest product catalog CSV into ChromaDB vector store.
-Run this once before starting the app: python -m assistant.ingest
+
 """
 
 import os
@@ -9,7 +9,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 
-# Paths relative to project root (works locally and on Streamlit Cloud)
+# Paths relative to project root
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PRODUCTS_CSV = os.path.join(BASE_DIR, "data", "products.csv")
 CHROMA_DIR = os.path.join(BASE_DIR, "vectorstore")

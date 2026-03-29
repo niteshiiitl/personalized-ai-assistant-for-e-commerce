@@ -1,6 +1,6 @@
 """
 Streamlit E-Commerce App with Personalised AI Assistant (ShopBot)
-Run: streamlit run ecommerce_app/app.py
+
 """
 
 import sys, os
@@ -77,7 +77,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+# ── Helpers
 # Reliable product images mapped by product name (Unsplash direct image URLs)
 PRODUCT_IMAGES = {
     "Nike Air Max 270": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop",
@@ -154,7 +154,7 @@ def load_products():
     return pd.read_csv(csv_path)
 
 
-# ── Session state ─────────────────────────────────────────────────────────────
+#  Session state
 if "chain" not in st.session_state:
     with st.spinner("Loading ShopBot..."):
         try:
@@ -173,7 +173,7 @@ if st.session_state.get("chain_error"):
 
 df = load_products()
 
-# ── Sidebar filters ───────────────────────────────────────────────────────────
+#  Sidebar filter
 with st.sidebar:
     st.markdown("## ShopSmart AI")
     st.caption("Powered by RAG + Groq LLaMA 3.3")
@@ -206,7 +206,7 @@ with st.sidebar:
         st.session_state.chain = build_chain()
         st.rerun()
 
-# ── Apply filters ─────────────────────────────────────────────────────────────
+#  Apply filter
 filtered_df = df.copy()
 if selected_cat != "All":
     filtered_df = filtered_df[filtered_df["category"] == selected_cat]
@@ -222,10 +222,10 @@ filtered_context = "\n\n".join([
     for _, row in filtered_df.iterrows()
 ])
 
-# ── Layout ────────────────────────────────────────────────────────────────────
+#  Layers
 chat_col, catalog_col = st.columns([3, 2], gap="large")
 
-# ── Chat panel ────────────────────────────────────────────────────────────────
+#  Chat panel 
 with chat_col:
     st.markdown('<span class="section-title">Chat with ShopBot</span>', unsafe_allow_html=True)
 
@@ -275,7 +275,7 @@ with chat_col:
                 })
         st.rerun()
 
-# ── Product catalog ───────────────────────────────────────────────────────────
+#  Product catalog 
 with catalog_col:
     st.markdown(
         f'<span class="section-title">Product Catalog</span> <span style="font-size:0.8rem;color:#888;">({len(filtered_df)} items)</span>',

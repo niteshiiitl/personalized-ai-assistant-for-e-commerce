@@ -1,15 +1,4 @@
-"""
-Entry point for the ShopSmart AI e-commerce assistant.
 
-Steps:
-  1. Ingest products into ChromaDB (run once)
-  2. Launch the Streamlit app
-
-Usage:
-  python main.py --ingest       # build/rebuild the vector store
-  python main.py --app          # launch the Streamlit UI
-  python main.py --finetune     # generate fine-tune JSONL dataset
-"""
 
 import sys
 import os

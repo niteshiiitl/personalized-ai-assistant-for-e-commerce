@@ -1,7 +1,6 @@
 """
 Fine-tune dataset preparation.
-Generates a JSONL file in chat format (compatible with OpenAI / Groq fine-tuning).
-Run: python -m assistant.finetune_prep
+Generates a JSONL file in chat format (compatible with OpenAI / Groq fine-tuning)
 """
 
 import json
@@ -12,7 +11,7 @@ OUTPUT_JSONL = "data/finetune_dataset.jsonl"
 
 SYSTEM_MSG = "You are ShopBot, a helpful AI shopping assistant for an e-commerce store."
 
-# Template Q&A pairs per product
+# Template Q&A/ product
 def generate_pairs(row):
     name = row["name"]
     price = row["price"]
@@ -53,7 +52,7 @@ def build_finetune_dataset():
     for _, row in df.iterrows():
         all_pairs.extend(generate_pairs(row))
 
-    # Add general shopping Q&A
+   #QA
     general_pairs = [
         {
             "messages": [
