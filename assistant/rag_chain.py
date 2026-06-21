@@ -11,6 +11,9 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from assistant.ingest import get_vectorstore_auto
 
+# Keep the last N turns (1 turn = 1 human + 1 AI message) to avoid context overflow
+MAX_HISTORY_TURNS = 4
+
 load_dotenv()
 
 
@@ -69,12 +72,34 @@ def build_chain():
     return {"chain": chain, "retriever": retriever}
 
 
+def _trim_history(chat_history: list) -> list:
+    """Keep only the last MAX_HISTORY_TURNS pairs to stay within context limits."""
+    # Each turn = 2 messages (HumanMessage + AIMessage)
+    max_messages = MAX_HISTORY_TURNS * 2
+    return chat_history[-max_messages:] if len(chat_history) > max_messages else chat_history
+
+
+def _trim_filtered_context(filtered_context: str, max_products: int = 10) -> str:
+    """Limit injected filter context to avoid overwhelming the context window."""
+    if not filtered_context:
+        return ""
+    lines = [l for l in filtered_context.strip().split("\n") if l.strip()]
+    trimmed = lines[:max_products]
+    suffix = f"\n...and {len(lines) - max_products} more matching products." if len(lines) > max_products else ""
+    return "\n".join(trimmed) + suffix
+
+
 def ask(chain_dict, question: str, chat_history: list = None, filtered_context: str = None) -> dict:
-    chat_history = chat_history or []
-    # If sidebar filters are active, prepend filtered context to the question
+    chat_history = _trim_history(chat_history or [])
+
+    # Inject a compact filter summary (not the full list) to avoid context overflow
     augmented_question = question
     if filtered_context:
-        augmented_question = f"[Active filters context - only consider these products]\n{filtered_context}\n\nUser question: {question}"
+        compact = _trim_filtered_context(filtered_context)
+        augmented_question = (
+            f"[Active filters — only recommend from these products]\n{compact}\n\nUser question: {question}"
+        )
+
     answer = chain_dict["chain"].invoke({
         "question": augmented_question,
         "chat_history": chat_history,
